@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.box {
+			position: relative;
+			margin: 200px auto 0;
+			width: 300px;
+			height: 90px;
+			background: linear-gradient(to right, rgb(255, 85, 85), rgb(207, 224, 232));
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			/* align-items:center; */
+			color: #ffffff;
+			width: 60%;
+			height: 100%;
+		}
+
+		.zhekou {
+			font-size: 22px;
+		}
+
+		.tiaojian {
+			font-size: 12px;
+			margin-top: 10px;
+		}
+
+		.right {
+			width: 40%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 8px 16px;
+			border: 1px solid #ffffff;
+			color: #ffffff;
+			font-size: 14px;
+			cursor: pointer;
+		}
+
+		.circle1 {
+			position: absolute;
+			z-index: 5;
+			bottom: 5px;
+			left: 0px;
+			transform-origin: bottom left;
+			transform: rotate(90deg);
+			width: 10px;
+			height: 160px;
+			background-image: radial-gradient(circle, #fff, #fff 4px, transparent 0px, transparent 2px, transparent 22px, transparent);
+			background-size: 9px 12px;
+			background-repeat: repeat-y;
+		}
+
+		.circle2 {
+			position: absolute;
+			z-index: 5;
+			top: -8px;
+			left: 160px;
+			transform-origin: center left;
+			transform: rotate(90deg);
+			width: 160px;
+			height: 12px;
+			background-image: radial-gradient(circle, #fff, #fff 3px, transparent -4px, transparent 2px, transparent 22px, transparent);
+			/* 主要是的内容是这句background-image；画好之后，根据你要放的位置来移动 */
+			background-size: 8px 8px;
+			background-repeat: repeat-x;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="left">
+		<span class="zhekou">8.00折</span>
+		<span class="tiaojian">满10.00元可用</span>
+	</div>
+	<div class="right">
+		<span class="circle3"></span>
+		<span class="btn">点击领取</span>
+	</div>
+	<div class="circle1"></div>
+	<div class="circle2"></div>
+</div>
+</body>
+</html>
